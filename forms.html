@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="searchBar">
+        <input class="searchBar" type="search" placeholder="Search" />
+    </div>
+    <div id="userForm">
+        <h3 class="title">Registration Form</h3>
+        <form>
+            <div class="row">
+                <div class="form-group col-md-6 mb-0">
+                    <label for="name">Name <super>*</super></label>
+                    <input type="text" class="form-control md-5" id="name" placeholder="Enter name" required />
+                    <p class="red-text" id="nameAck"></p>
+                </div>
+                <div class="form-group col-md-6 mb-0">
+                    <label for="email">Email address <super>*</super></label>
+                    <input type="email" class="form-control md-5" id="email" aria-describedby="emailHelp"
+                        placeholder="Enter email" required />
+                    <small class="red-text" id="emailAck"></small>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-6 mb-0">
+                    <label for="contact">Contact <super>*</super></label>
+                    <input type="tel" class="form-control md-5" id="contact" placeholder="Enter Phone number"
+                        required />
+                    <small class="red-text" id="contactAck"></small>
+                </div>
+                <div class="form-group col-md-6 mb-0">
+                    <label for="dob">Date of birth <super>*</super></label>
+                    <input type="date" class="form-control md-5" id="dob" required />
+                    <small class="red-text" id="dobAck"></small>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-6 mb-0">
+                    <label for="gender">Gender <super>*</super></label>
+                    <select class="form-control" id="gender" required>
+                        <option></option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Others">Others</option>
+                    </select>
+                    <small class="red-text" id="genderAck"></small>
+                </div>
+                <div class="form-group col-md-6 mb-0">
+                    <label for="education">Education <super>*</super></label>
+                    <select class="form-control" id="education">
+                        <option></option>
+                        <option value="B.Tech">B.Tech</option>
+                        <option value="B.E">B.E</option>
+                        <option value="B.Sc">B.Sc</option>
+                        <option value="B.A">B.A</option>
+                        <option value="M.Tech">M.Tech</option>
+                        <option value="M.E">M.E</option>
+                        <option value="M.Sc">M.Sc</option>
+                        <option value="M.A">M.A</option>
+                    </select>
+                    <small class="red-text" id="educationAck"></small>
+                </div>
+            </div>
+            <div class="form-group col-md-12 mb-0">
+                <label for="occupation">Occupation</label>
+                <input type="text" class="form-control md-5" id="occupation" placeholder="Enter Occupation" />
+                <small class="red-text" id="occupation"></small>
+            </div>
+            <div class="row">
+                <div class="form-group  col-md-6 mb-0">
+                    <label for="username">Username <super>*</super></label>
+                    <input type="text" class="form-control md-5" id="username" placeholder="Enter username" required />
+                    <small class="red-text" id="usernameAck"></small>
+                </div>
+                <div class="form-group  col-md-6 mb-0">
+                    <label for="password">Password <super>*</super></label>
+                    <div id="passwordArea">
+                        <input type="password" class="form-control" id="password" placeholder="Password" required />
+                        <img onclick="togglePassword()" src="https://cdn-icons-png.flaticon.com/512/159/159604.png" />
+                    </div>
+                    <small class="red-text" id="passwordAck"></small>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-6 mb-0">
+                    <label for="pan">Permanent Account Number <super>*</super></label>
+                    <input type="text" class="form-control md-5" id="pan" placeholder="Enter PAN" required />
+                    <small class="red-text" id="panAck"></small>
+                </div>
+                <div class="form-group col-md-6 mb-0">
+                    <label for="profile">Profile Picture <super>*</super></label>
+                    <input type="file" id="profile" class="form-control md-5" required />
+                    <small class="red-text" id="profileAck"></small>
+                </div>
+            </div>
+            <div class="form-group col-md-6" style="width: 100% !important;">
+                <button type="submit" style="margin:30px 40% !important;"
+                    class="btn btn-primary mx-auto">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div id="searchArea">
+        <h3 class="title">Matched Users</h3>
+        <div id="users"></div>
+    </div>
+    <script src="Validation.js"></script>
+    <script src="Search.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

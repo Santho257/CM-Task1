@@ -1,0 +1,78 @@
+.title{
+    text-align: center;
+    background-color: #232323;
+    color: white
+}
+form{
+    margin: auto;
+    height: 90vh;
+    padding: 30px 8%;
+}
+.form-group[focus]{
+    box-shadow: none;
+}
+super{
+    color: red;
+}
+.red-text{
+    color: red;
+    font-size: 0.75em;
+}
+.searchBar{
+    width: 80%;
+    margin: 10px;
+    height: 30px;
+    padding: 20px;
+    border-radius: 15px;
+}
+#searchBar{
+    display: flex;
+    justify-content: center;
+}
+#searchBar h6{
+    height: 30px;
+    padding: 20px 5px;
+}
+#searchArea{
+    display: none;
+}
+#searchArea h2{
+    text-align: center;
+    color: red;
+    width: 100%;
+}
+#users{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 10%;
+}
+#users .user{
+    width: 300px;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: #232323;
+    color: white;
+    padding: 10px;
+}
+
+.user h4{
+    text-align: center;
+}
+#users .user img{
+    width: 200px;
+    height: 200px;
+    margin-left: 40px;
+    border-radius: 50%;
+    text-align: center;
+}
+#passwordArea{
+    display: flex;
+}
+#passwordArea input{
+    width: 90%;
+    margin-right: 1%;
+}
+#passwordArea img{
+    width: 8%;
+}
+
